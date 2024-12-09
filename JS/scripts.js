@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let allCards = [];
 
-    // Fetch Pokémon cards
     async function fetchCards() {
         try {
             const response = await fetch(`${apiUrl}?pageSize=256`);
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Display cards
     function displayCards(cards) {
         cardList.innerHTML = '';
         cards.forEach(card => {
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Show popup
     function showCardPopup(card) {
         const popup = document.createElement('div');
         popup.className = 'popup';
@@ -57,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(popup);
     }
 
-    // Filter cards by type and rarity
     function filterCards() {
         const typeValue = typeFilter.value.toLowerCase();
         const rarityValue = rarityFilter.value.toLowerCase();
@@ -69,16 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
         displayCards(filteredCards);
     }
 
-    // Toggle dark mode
+    // Dark mode
     function toggleTheme() {
         document.body.classList.toggle('dark-mode');
     }
 
-    // Event listeners
     typeFilter.addEventListener('change', filterCards);
     rarityFilter.addEventListener('change', filterCards);
     toggleThemeButton.addEventListener('click', toggleTheme);
 
-    // Initial fetch
     fetchCards();
 });
