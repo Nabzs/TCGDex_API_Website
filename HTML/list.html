@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon TCG Dex</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <header>
+    <a href="./compare.html">Comparer</a>
+    <a href="../index.html">Accueil</a>
+
+        <h1>Pokémon TCG Dex</h1>
+        <div class="filters">
+            <select id="type-filter">
+                <option value="">All Types</option>
+                <option value="Fire">Feu</option>
+                <option value="Water">Eau</option>
+                <option value="Lightning">Electrique</option>
+                <option value="Grass">Plante</option>
+                <option value="Psychic">Psychic</option>
+                <option value="Fighting">Combattant</option>
+                <option value="Darkness">Dark</option>
+                <option value="Metal">Métal</option>
+                <option value="Fairy">Fée</option>
+                <option value="Colorless">Colorless</option>
+                <option value="Dragon">Dragon</option>
+            </select>
+            <select id="rarity-filter">
+                <option value="">Toutes les raretés</option>
+                <option value="Unknown">Non connu</option>
+                <option value="Common">Common</option>
+                <option value="Uncommon">Peu commun</option>
+                <option value="Rare">Rare</option>
+                <option value="Rare Holo">Rare Holo</option>
+                <option value="Rare Holo EX">Rare Holo EX</option>
+                <option value="Secret Rare">Secret Rare</option>
+            </select>
+            <button id="toggle-theme">Mode sombre</button>
+        </div>
+    </header>
+    <main>
+        <div id="card-list" class="card-list"></div>
+    </main>
+    <script src="../JS/scripts.js"></script>
+</body>
+</html>
