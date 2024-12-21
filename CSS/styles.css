@@ -1,36 +1,47 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #333;
+    color: #f8f8f8;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.dark-mode {
-    background-color: #333;
-    color: #f8f8f8;
-}
-
-
+/* Header Styling */
 header {
-    background-color: #ffcc00;
-    color: #333;
+    background-color: rgb(29, 29, 29);
+    color: #FEFEFE;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.filters {
-    margin-top: 10px;
+#logo img {
+    max-width: 100px;
+    height: auto;
 }
 
-.filters select, .filters button {
-    margin: 5px;
-    padding: 5px 10px;
-    font-size: 1em;
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Card list */
+ul li {
+    margin-right: 30px;
+    text-decoration: underline;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #FEFEFE;
+    font-size: 1.1em;
+}
+
+/* Card list and layout */
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +67,7 @@ header {
     border-radius: 8px;
 }
 
-/* Popup */
+/* Popup Styling */
 .popup {
     display: flex;
     position: fixed;
@@ -75,7 +86,7 @@ header {
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    max-width: 500px;
+    max-width: 700px;
     position: relative;
     text-align: center;
     overflow-y: auto;
@@ -88,12 +99,14 @@ header {
     margin-bottom: 15px;
 }
 
-.popup h2 {
+.popup h2,h3 {
     margin: 10px 0;
+    color: #333;
 }
 
-.popup p {
+.popup p,strong {
     margin: 10px 0;
+    color: #000;
 }
 
 .close-popup {
@@ -107,4 +120,28 @@ header {
 
 .close-popup:hover {
     color: red;
+}
+
+/* Attacks List */
+.attack-list {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.attack-item {
+    margin-bottom: 15px;
+}
+
+.related-cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.related-cards-list img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
 }
